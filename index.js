@@ -22,10 +22,10 @@ app.set('port', process.env.PORT || 6003);
 // enable the following line in Bluemix
 //app.set('port', appEnv.port);
 
-app.set('views', path.join(__dirname + '/HTML'));
+app.set('views', path.join(__dirname + '/src'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
-app.use(express.static(__dirname + '/HTML'));
+app.use(express.static(__dirname + '/src'));
 app.use(bodyParser.json());
 
 // Define your own router file in controller folder, export the router, add it into the index.js.
@@ -40,7 +40,7 @@ http.createServer(app).listen(app.get('port'),
 
 function loadSelectedFile(req, res) {
     var uri = req.originalUrl;
-    var filename = __dirname + "/HTML" + uri;
+    var filename = __dirname + "/src" + uri;
     fs.readFile(filename,
         function(err, data) {
             if (err) {
