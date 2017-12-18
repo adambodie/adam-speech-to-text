@@ -1,6 +1,4 @@
- /*
- * Zero to Cognitive Chapter 3
- */
+
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -18,7 +16,7 @@ var app = express();
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.set('appName', 'z2c-chapter03');
+app.set('appName', 'adam-speech-to-text');
 // disable the following line in Bluemix. App will start on port 6003 in Bluemix
 app.set('port', process.env.PORT || 6003);
 // enable the following line in Bluemix
