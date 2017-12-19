@@ -10,18 +10,17 @@
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="css/pageStyles.css" rel="stylesheet" type="text/css">
 	</head>
-	<body class="tutorial" onLoad="initPage()">
+	<body onLoad="initPage()">
 		<div class="cover">
 			<div class="navbar">
-				<div class="container" >
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse" style="background-color: #E0E0E0">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse" >
 							<span class="sr-only" >Toggle navigation</span>
 							<span class="icon-bar" ></span>
 							<span class="icon-bar" ></span>
 							<span class="icon-bar" ></span>
 						</button>
-						<a class="navbar-brand" href="#" style="color: #466BB0;"><span>Adam's Speech To Text</span></a>
+						<a class="navbar-brand" href="#"><span>Adam's Speech To Text</span></a>
 					</div>
 					<div class="collapse navbar-collapse" id="navbar-ex-collapse">
 						<ul class="nav navbar-nav navbar-right">
@@ -30,30 +29,27 @@
 							</li>
 						</ul>
 					</div>
-				</div>
 			</div>
-			<div class="container", id="top" >
-				<div class="app_container" id="body">
+			<div class="container", id="top">
 					<div class="row">
-						<div class="col-md-6 text-center" style="color: #466BB0; ">
-							<h1>Adam's First Watson App: Speech to Text</h1>
+						<div class="col-md-8 col-md-offset-2 title">
+							<h1>Adam's First Watson App:</h1>
+							<h3>Speech to Text</h3>
 						</div>
 					</div>
 					<div class="row">
-						<br/>
-						<div class="col-md-6">
+						<div class="col-md-8 col-md-offset-2 buttons">
 							<center>
-								<img id="microphone" src="icons/microphone.png"> 
-								... 
-								<img id="stop" src="icons/stop.png">
+								<img id="microphone" src="icons/microphone.png" alt="microphone"> 
+								<img id="stop" src="icons/stop.png" alt="stop">
+								<img id="reset" src="icons/reset.png" alt="reset">
 							</center>
 						</div>
-					<br/>
 					</div>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-8 col-md-offset-2">
 							<center>
-								<div cols="50" class="speech-only" id="speech" readonly wrap="soft" >Spoken output goes here</div>
+								<div class="speech-only" id="speech" readonly wrap="soft" >Spoken output goes here</div>
 							</center>
 						</div>
 					</div>

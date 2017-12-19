@@ -2,18 +2,14 @@
 ** z2c-speech.js
 */
 
-function initPage ()
-{
+function initPage () {
   var _mic = $('#microphone'); var _stop = $("#stop");
     _mic.addClass("mic_enabled");
     _stop.addClass("mic_disabled");
 
-  _mic.on("click", function ()
-    {
+  _mic.on("click", function () {
       var _className = this.className;
-      if(this.className == "mic_enabled")
-      {
-
+      if(this.className == "mic_enabled") {
         _mic.addClass("mic_disabled");
         _mic.removeClass("mic_enabled");
         _stop.addClass("mic_enabled");
@@ -34,7 +30,9 @@ function initPage ()
   _stop.on("click",  function() {
     console.log("Stopping text-to-speech service...");
 
-    if (!((typeof(stream) == "undefined") || (stream == null))) {stream.stop(); }
+    if (!((typeof(stream) == "undefined") || (stream == null))) {
+		stream.stop(); 
+	}
     _mic.addClass("mic_enabled");
     _mic.removeClass("mic_disabled");
     _stop.addClass("mic_disabled");
