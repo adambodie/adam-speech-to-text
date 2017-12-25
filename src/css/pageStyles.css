@@ -30,15 +30,19 @@ body {
 }
 
 .mic_disabled {
-	opacity: 0.7
+	opacity: 1.0;
 }
 .mic_enabled {
-	opacity: 1;
+	opacity: 1.0;
 }
 
 .buttons img {
 	margin: 20px;
 }
+.buttons img:hover {
+	opacity: 0.8;
+}
+
 .title h1, h3 {
 	text-align: center;
 	color: black;
