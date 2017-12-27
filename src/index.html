@@ -13,46 +13,44 @@
 	<body onLoad="initPage()">
 		<div class="cover">
 			<div class="navbar">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse" >
-							<span class="sr-only" >Toggle navigation</span>
-							<span class="icon-bar" ></span>
-							<span class="icon-bar" ></span>
-							<span class="icon-bar" ></span>
-						</button>
-						<a class="navbar-brand" href="#"><span>Adam's Speech To Text</span></a>
-					</div>
-					<div class="collapse navbar-collapse" id="navbar-ex-collapse">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="active">
-								<a href="#">Home</a>
-							</li>
-						</ul>
-					</div>
+				<div class="navbar-header">
+					<h3>Adam's Speech To Text</h3>
+				</div>
 			</div>
-			<div class="container", id="top">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 title">
-							<h1>Adam's First Watson App:</h1>
-							<h3>Speech to Text</h3>
-						</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 title">
+						<h1>Adam's First Watson App</h1>
+						<h3>Speech to Text</h3>
 					</div>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 buttons">
-							<center>
-								<img id="microphone" src="icons/microphone.png" alt="microphone" title="microphone"> 
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 buttons">
+						<center>
+							<div class="item">
+								<img id="microphone" src="icons/microphone.png" alt="microphone" title="microphone">
+								<p>Record</p>
+							</div>
+							<div class="item">
 								<img id="stop" src="icons/stop.png" alt="stop" title="stop">
+								<p>Stop</p>
+							</div>
+							<div class="item">
 								<img id="translate" src="icons/translate.png" alt="translate" title="translate">
+								<p>Translate</p>
+							</div>
+							<div class="item">
 								<img id="reset" src="icons/reset.png" alt="reset" title="reset">
-							</center>
-						</div>
+								<p>Reset</p>
+							</div>
+						</center>
 					</div>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<center>
-								<div class="speech-only" id="speech" readonly wrap="soft" >Spoken output goes here</div>
-							</center>
-						</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<center>
+							<div class="speech-only" id="speech" readonly wrap="soft" >Spoken output goes here</div>
+						</center>
 					</div>
 				</div>
 			</div>
