@@ -2,6 +2,18 @@
 ** z2c-speech.js
 */
 
+
+pigLatin = text => {
+    let regex = /(^[^aeiou]*)(\w*\'?\w*)/ig;
+    let replacement = '$2-$1ay';
+    pigLatinSpeech = [];
+    newSpeech = text.split(" ");
+	newSpeech.forEach((element) => { pigLatinSpeech.push(element.replace(regex, replacement)); });
+	if (pigLatinSpeech[pigLatinSpeech.length - 1 ] == "-ay") {pigLatinSpeech.pop();}
+    translatedSpeech = pigLatinSpeech.join(" ");
+    return translatedSpeech;
+  }
+
 initPage = () => {
 	const _mic = $('#microphone'), 
 		  _stop = $('#stop'),
@@ -55,14 +67,9 @@ initPage = () => {
 		});
 		
 		_translate.on("click", () => {
-			let regex = /(^[^aeiou]*)(\w*\'?\w*)/ig;
-			let replacement = '$2-$1ay';
-			newSpeech = _speech.text().split(" ");
-			pigLatinSpeech = [];
-			newSpeech.forEach((element) => { pigLatinSpeech.push(element.replace(regex, replacement)); });
-			if (pigLatinSpeech[pigLatinSpeech.length - 1 ] == "-ay") {pigLatinSpeech.pop();}
-			translatedSpeech = pigLatinSpeech.join(" ");
-			_speech.html(translatedSpeech);
+			_speech.html(pigLatin(_speech.text()));
 			console.log("Translated to Pig Latin");
 		});
 	}
+
+module.exports = pigLatin;
